@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8d205cb-f8a5-48d0-9036-65716e7df9c2" name="Changes" comment="" />
+    <list default="true" id="b8d205cb-f8a5-48d0-9036-65716e7df9c2" name="Changes" comment="创建工程">
+      <change afterPath="$PROJECT_DIR$/URS.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "wtc777"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/wtc777/tcwang_loverRecord.git",
+    "accountId": "0f8ed548-ca02-4853-97c0-6608acdc1eca"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>
@@ -19,6 +36,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -38,11 +56,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1759630356524</updated>
-      <workItem from="1759630357943" duration="8000" />
+      <workItem from="1759630357943" duration="113000" />
     </task>
+    <task id="LOCAL-00001" summary="创建工程">
+      <option name="closed" value="true" />
+      <created>1759630425247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759630425247</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建工程" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建工程" />
   </component>
 </project>
