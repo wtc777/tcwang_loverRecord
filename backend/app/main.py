@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 
 from .config import settings
 from .db import init_db
-from .routers import auth, events, media, settings as settings_router
+from .routers import events, media, settings as settings_router
 
 
 init_db()
@@ -30,7 +30,6 @@ async def health_check() -> dict[str, str]:
 	return {"status": "ok"}
 
 
-app.include_router(auth.router)
 app.include_router(events.router)
 app.include_router(media.router)
 app.include_router(settings_router.router)

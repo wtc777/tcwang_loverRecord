@@ -14,10 +14,6 @@ const handleSelect = (key: string) => {
 	}
 }
 
-const logout = () => {
-	localStorage.removeItem('token')
-	router.push('/')
-}
 </script>
 
 <template>
@@ -26,10 +22,9 @@ const logout = () => {
 			<h2>情侣手账</h2>
 			<el-menu :default-active="active" @select="handleSelect">
 				<el-menu-item index="timeline">时间线</el-menu-item>
-				<el-menu-item index="calendar">日历</el-menu-item>
-				<el-menu-item index="photos">照片墙</el-menu-item>
-			</el-menu>
-			<el-button type="text" @click="logout">退出</el-button>
+                                <el-menu-item index="calendar">日历</el-menu-item>
+                                <el-menu-item index="photos">照片墙</el-menu-item>
+                        </el-menu>
 		</aside>
 		<main class="content">
 			<RouterView />
