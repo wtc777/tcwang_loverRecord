@@ -29,25 +29,33 @@ const login = async () => {
 }
 
 const startMusic = () => {
-	if (audioRef.value) {
-		audioRef.value.play()
-		started.value = true
-	}
+        if (audioRef.value) {
+                audioRef.value.play()
+                started.value = true
+        }
+}
+
+const goToRegister = () => {
+        router.push('/register')
 }
 </script>
 
 <template>
-	<div class="login-hero">
-		<div class="floating-hearts"></div>
-		<div class="panel">
-			<h1>甜心手账</h1>
-			<el-input v-model="email" placeholder="邮箱" />
-			<el-input v-model="password" placeholder="密码" type="password" />
-			<el-button type="primary" class="w-full" @click="login">登录</el-button>
-			<el-button v-if="!started" class="w-full" @click="startMusic">开启浪漫BGM</el-button>
-			<audio ref="audioRef" src="/static/assets/bgm.mp3" loop></audio>
-		</div>
-	</div>
+        <div class="login-hero">
+                <div class="floating-hearts"></div>
+                <div class="panel">
+                        <h1>甜心手账</h1>
+                        <el-input v-model="email" placeholder="邮箱" />
+                        <el-input v-model="password" placeholder="密码" type="password" />
+                        <el-button type="primary" class="w-full" @click="login">登录</el-button>
+                        <div class="helper-text">
+                                <span>还没有账号？</span>
+                                <el-button link type="primary" @click="goToRegister">去注册</el-button>
+                        </div>
+                        <el-button v-if="!started" class="w-full" @click="startMusic">开启浪漫BGM</el-button>
+                        <audio ref="audioRef" src="/static/assets/bgm.mp3" loop></audio>
+                </div>
+        </div>
 </template>
 
 <style scoped>
@@ -82,7 +90,16 @@ const startMusic = () => {
 }
 
 .w-full {
-	width: 100%;
+        width: 100%;
+}
+
+.helper-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        font-size: 14px;
+        color: #666;
 }
 
 @keyframes pulse {
