@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 
+import type { AxiosError } from 'axios'
+
 import apiClient from '../api/http'
 
 const email = ref('')
@@ -30,7 +32,13 @@ const register = async () => {
                 ElMessage.success('注册成功，请登录')
                 router.push('/')
         } catch (error) {
-                ElMessage.error('注册失败，该邮箱可能已被使用')
+                console.error('注册失败', error)
+                const err = error as AxiosError<{ detail?: string | string[] }>
+                const detail = err.response?.data?.detail
+                const message = Array.isArray(detail)
+                        ? detail.join('\n')
+                        : detail || '注册失败，请稍后再试'
+                ElMessage.error(message)
         } finally {
                 isSubmitting.value = false
         }
